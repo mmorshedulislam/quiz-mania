@@ -14,10 +14,7 @@ const Intro = () => {
         <div className="col-md-6">
           <h2>Test of Knowledge</h2>
           <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati
-            fugit officiis sed quibusdam ratione iste qui neque quia omnis
-            accusantium, aliquam, non incidunt assumenda cumque vitae sint
-            tenetur enim commodi.
+            Test your skills by taking more quizzes. Do the quiz below quickly.
           </p>
         </div>
       </div>

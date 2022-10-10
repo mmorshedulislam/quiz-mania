@@ -6,16 +6,17 @@ import QuizBox from "../QuizBox/QuizBox";
 
 const Topics = () => {
   const topics = useLoaderData().data;
+
+  console.log(topics);
   return (
     <div className="container">
       <Intro />
+
       <div className="row g-4 mb-5">
         {topics.map((topic) => (
           <QuizBox key={topic.id} topic={topic} />
         ))}
       </div>
-
-      <Quiz/>
     </div>
   );
 };

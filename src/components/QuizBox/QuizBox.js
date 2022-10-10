@@ -1,11 +1,12 @@
 import React from "react";
 import { Card } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const QuizBox = ({ topic }) => {
-  const { logo, name, total } = topic;
+  const { id, logo, name, total } = topic;
   return (
     <div className="col-md-6">
-      <Card border="primary" style={{ width: "75%", margin: '0 auto' }}>
+      <Card border="primary" style={{ width: "75%", margin: "0 auto" }}>
         <Card.Header>{name}</Card.Header>
         <Card.Body>
           <img src={logo} className="img-fluid" alt={name} />
@@ -15,7 +16,9 @@ const QuizBox = ({ topic }) => {
               <Card.Text>Total Quiz: {total}</Card.Text>
             </div>
             <div>
-              <button className="btn btn-primary">Start Quiz</button>
+              <Link to={`/quiz/${id}`}>
+                <button className="btn btn-primary">Start Quiz</button>
+              </Link>
             </div>
           </div>
         </Card.Body>

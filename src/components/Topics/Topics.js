@@ -1,11 +1,11 @@
 import React from "react";
 import { useLoaderData } from "react-router-dom";
 import Intro from "../Intro/Intro";
+import Quiz from "../Quiz/Quiz";
 import QuizBox from "../QuizBox/QuizBox";
 
 const Topics = () => {
   const topics = useLoaderData().data;
-  console.log(topics);
   return (
     <div className="container">
       <Intro />
@@ -14,6 +14,8 @@ const Topics = () => {
           <QuizBox key={topic.id} topic={topic} />
         ))}
       </div>
+
+      <Quiz/>
     </div>
   );
 };

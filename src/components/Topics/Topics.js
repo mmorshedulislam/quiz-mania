@@ -1,8 +1,7 @@
 import React from "react";
 import { useLoaderData } from "react-router-dom";
 import Intro from "../Intro/Intro";
-import Quiz from "../Quiz/Quiz";
-import QuizBox from "../QuizBox/QuizBox";
+import Topic from "../Topic/Topic";
 
 const Topics = () => {
   const topics = useLoaderData().data;
@@ -14,7 +13,7 @@ const Topics = () => {
 
       <div className="row g-4 mb-5">
         {topics.map((topic) => (
-          <QuizBox key={topic.id} topic={topic} />
+          <Topic key={topic.id} topic={topic} />
         ))}
       </div>
     </div>

@@ -2,7 +2,7 @@ import React from "react";
 import { Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-const QuizBox = ({ topic }) => {
+const Topic = ({ topic }) => {
   const { id, logo, name, total } = topic;
   return (
     <div className="col-md-6">
@@ -27,4 +27,4 @@ const QuizBox = ({ topic }) => {
   );
 };
 
-export default QuizBox;
+export default Topic;

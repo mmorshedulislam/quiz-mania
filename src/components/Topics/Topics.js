@@ -1,11 +1,21 @@
-import React from 'react';
+import React from "react";
+import { useLoaderData } from "react-router-dom";
+import Intro from "../Intro/Intro";
+import QuizBox from "../QuizBox/QuizBox";
 
 const Topics = () => {
-    return (
-        <div>
-            <h2>Topics</h2>
-        </div>
-    );
+  const topics = useLoaderData().data;
+  console.log(topics);
+  return (
+    <div className="container">
+      <Intro />
+      <div className="row g-4 mb-5">
+        {topics.map((topic) => (
+          <QuizBox key={topic.id} topic={topic} />
+        ))}
+      </div>
+    </div>
+  );
 };
 
 export default Topics;

@@ -10,7 +10,7 @@ Let's start.
 
 ## Live Link
 
-Hosted in Netlify -> [Quiz Mania](httphttps://quiz-mania-09.netlify.app/)
+Hosted in Netlify -> [Quiz Mania](https://quiz-mania-09.netlify.app/)
 
 ## Context API
 

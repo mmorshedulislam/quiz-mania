@@ -16,11 +16,23 @@ const QuizOption = ({ question }) => {
       });
     }
   };
+
+  const handleCorrect = (question) => {
+    toast(`Correct Answer is : ${question.correctAnswer}`);
+  };
+
   return (
-    <div>
-      <div className="border border-primary rounded p-4 w-50 mx-auto my-3">
+    <div className="col-md-6">
+      <div className="border border-primary rounded p-4 w-100 mx-auto my-3">
         {/* Quiz Question */}
-        <h4 className="text-center">{question.question}</h4>
+        <div className="d-flex justify-content-between bg-transparent">
+          <h4 className="text-center">{question.question}</h4>
+          <div>
+            <span onClick={() => handleCorrect(question)} className="fs-5 ms-3">
+              <i class="fa-solid fa-eye-slash"></i>
+            </span>
+          </div>
+        </div>
         {/* Quiz Options */}
         <div>
           {question.options.map((option) => (

@@ -16,10 +16,7 @@ function NavBar() {
             Quiz Mania
           </Navbar.Brand>
           <Nav className="ms-auto menu">
-            <NavLink to={`/`} className={``}>
-              Home
-            </NavLink>
-            <NavLink to={`/topics`}>Topics</NavLink>
+            <NavLink to={`/`}>Topics</NavLink>
             <NavLink to={`/statistics`}>Statistics</NavLink>
             <NavLink to={`/blogs`}>Blogs</NavLink>
           </Nav>

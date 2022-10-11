@@ -44,33 +44,37 @@ const Statistics = () => {
   const statistics = useLoaderData().data;
 
   return (
-    <div className="w-50 mx-auto">
-      <h2 className="text-center my-3">Statistic of Quiz</h2>
-      <BarChart
-        width={700}
-        height={500}
-        data={statistics}
-        margin={{
-          top: 20,
-          right: 30,
-          left: 20,
-          bottom: 5,
-        }}
-      >
-        <CartesianGrid strokeDasharray="3 3" />
-        <XAxis dataKey="name" />
-        <YAxis />
-        <Bar
-          dataKey="total"
-          fill="#8884d8"
-          shape={<TriangleBar />}
-          label={{ position: "top" }}
-        >
-          {statistics.map((entry, index) => (
-            <Cell key={`cell-${index}`} fill={colors[index % 20]} />
-          ))}
-        </Bar>
-      </BarChart>
+    <div className="row ">
+      <div className="col-md-8 offset-md-2">
+        <h2 className="text-center my-3">Statistic of Quiz</h2>
+        <ResponsiveContainer width="95%" height={400}>
+          <BarChart
+            width={700}
+            height={500}
+            data={statistics}
+            margin={{
+              top: 20,
+              right: 30,
+              left: 20,
+              bottom: 5,
+            }}
+          >
+            <CartesianGrid strokeDasharray="3 3" />
+            <XAxis dataKey="name" />
+            <YAxis />
+            <Bar
+              dataKey="total"
+              fill="#8884d8"
+              shape={<TriangleBar />}
+              label={{ position: "top" }}
+            >
+              {statistics.map((entry, index) => (
+                <Cell key={`cell-${index}`} fill={colors[index % 20]} />
+              ))}
+            </Bar>
+          </BarChart>
+        </ResponsiveContainer>
+      </div>
     </div>
   );
 };

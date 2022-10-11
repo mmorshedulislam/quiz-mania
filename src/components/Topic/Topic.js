@@ -6,10 +6,10 @@ const Topic = ({ topic }) => {
   const { id, logo, name, total } = topic;
   return (
     <div className="col-md-6">
-      <Card border="primary" style={{ width: "75%", margin: "0 auto" }}>
+      <Card className="bg-dark text-white" border="primary" style={{ width: "75%", margin: "0 auto" }}>
         <Card.Header>{name}</Card.Header>
         <Card.Body>
-          <img src={logo} className="img-fluid" alt={name} />
+          <img src={logo} className="img-fluid rounded rounded-circle" alt={name} />
           <div className="d-flex justify-content-between align-items-center">
             <div>
               <Card.Title className="mt-3">{name}</Card.Title>

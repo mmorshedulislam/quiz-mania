@@ -1,10 +1,16 @@
 # A Quiz Mania Repository
 
-An E-commerce platform for buying high quality Smart Home Appliances at extremely affordable Price.
+On this website you can check yourself with 4 types of quiz.
+1. React
+2. JavaScript
+3. CSS
+4. Git
+On this site, you can see how many quizzes there are on any topic by visiting the statistics page.
+Let's start.
 
 ## Live Link
 
-Hosted in Netlify -> [Quiz Mania](https://shome-shop.netlify.app/)
+Hosted in Netlify -> [Quiz Mania](httphttps://quiz-mania-09.netlify.app/)
 
 ## Context API
 

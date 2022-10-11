@@ -7,7 +7,7 @@ import "./NavBar.css";
 function NavBar() {
   return (
     <>
-      <Navbar bg="dark" variant="dark">
+      <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
         <Container>
           <NavLink to={`/`} className={`text-decoration-none`}>
             <Navbar.Brand href="#home" className="fs-2">
@@ -17,32 +17,35 @@ function NavBar() {
               Quiz Mania
             </Navbar.Brand>
           </NavLink>
-          <Nav className="ms-auto menu">
-            <NavLink
-              to={`/topics`}
-              className={({ isActive }) =>
-                isActive ? "bg-primary rounded" : ""
-              }
-            >
-              Topics
-            </NavLink>
-            <NavLink
-              to={`/statistics`}
-              className={({ isActive }) =>
-                isActive ? "bg-primary rounded" : ""
-              }
-            >
-              Statistics
-            </NavLink>
-            <NavLink
-              to={`/blogs`}
-              className={({ isActive }) =>
-                isActive ? "bg-primary rounded" : ""
-              }
-            >
-              Blogs
-            </NavLink>
-          </Nav>
+          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          <Navbar.Collapse id="responsive-navbar-nav">
+            <Nav className="ms-auto menu">
+              <NavLink
+                to={`/topics`}
+                className={({ isActive }) =>
+                  isActive ? "bg-primary rounded" : ""
+                }
+              >
+                Topics
+              </NavLink>
+              <NavLink
+                to={`/statistics`}
+                className={({ isActive }) =>
+                  isActive ? "bg-primary rounded" : ""
+                }
+              >
+                Statistics
+              </NavLink>
+              <NavLink
+                to={`/blogs`}
+                className={({ isActive }) =>
+                  isActive ? "bg-primary rounded" : ""
+                }
+              >
+                Blogs
+              </NavLink>
+            </Nav>
+          </Navbar.Collapse>
         </Container>
       </Navbar>
     </>

@@ -5,8 +5,8 @@ import { Link } from "react-router-dom";
 const Topic = ({ topic }) => {
   const { id, logo, name, total } = topic;
   return (
-    <div className="col-md-6">
-      <Card className="bg-dark text-white" border="primary" style={{ width: "75%", margin: "0 auto" }}>
+    <div className="col-md-6 col-lg-3">
+      <Card className="bg-dark text-white" border="primary" style={{ width: "100%", margin: "0 auto" }}>
         <Card.Header>{name}</Card.Header>
         <Card.Body>
           <img src={logo} className="img-fluid rounded rounded-circle" alt={name} />

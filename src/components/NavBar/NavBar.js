@@ -9,16 +9,39 @@ function NavBar() {
     <>
       <Navbar bg="dark" variant="dark">
         <Container>
-          <Navbar.Brand href="#home" className="fs-2">
-            <span>
-              <i class="fa-solid fa-brain"></i>
-            </span>{" "}
-            Quiz Mania
-          </Navbar.Brand>
+          <NavLink to={`/`} className={`text-decoration-none`}>
+            <Navbar.Brand href="#home" className="fs-2">
+              <span>
+                <i class="fa-solid fa-brain"></i>
+              </span>{" "}
+              Quiz Mania
+            </Navbar.Brand>
+          </NavLink>
           <Nav className="ms-auto menu">
-            <NavLink to={`/`}>Topics</NavLink>
-            <NavLink to={`/statistics`}>Statistics</NavLink>
-            <NavLink to={`/blogs`}>Blogs</NavLink>
+            <NavLink
+              to={`/topics`}
+              className={({ isActive }) =>
+                isActive ? "bg-primary rounded" : ""
+              }
+            >
+              Topics
+            </NavLink>
+            <NavLink
+              to={`/statistics`}
+              className={({ isActive }) =>
+                isActive ? "bg-primary rounded" : ""
+              }
+            >
+              Statistics
+            </NavLink>
+            <NavLink
+              to={`/blogs`}
+              className={({ isActive }) =>
+                isActive ? "bg-primary rounded" : ""
+              }
+            >
+              Blogs
+            </NavLink>
           </Nav>
         </Container>
       </Navbar>
